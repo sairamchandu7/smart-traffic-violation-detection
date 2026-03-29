@@ -4,3 +4,5 @@ ultralytics
 easyocr
 pyyaml
 requests
+flask
+gunicorn
