@@ -1,0 +1,27 @@
+source: "data/videos/traffic_overspeed_intro_demo.mp4"
+window_name: "B.Tech AI Traffic Monitoring Prototype"
+
+speed:
+  distance_meters: 42.0
+  line_y_start: 290
+  line_y_end: 360
+  speed_limit_kmph: 60.0
+
+models:
+  vehicle_detector: "yolov8n.pt"
+  helmet_detector: "yolov8n.pt"
+  plate_detector: "yolov8n.pt"
+
+ocr:
+  languages:
+    - en
+  min_text_confidence: 0.25
+
+reporting:
+  save_dir: "data/violations"
+  submit_to_api: false
+  api_url: "http://localhost:8000/api/violations"
+
+display:
+  show: true
+  resize_width: 1280

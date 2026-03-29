@@ -1,0 +1,27 @@
+source: 0
+window_name: "B.Tech AI Traffic Monitoring Live Camera"
+
+speed:
+  distance_meters: 20.0
+  line_y_start: 260
+  line_y_end: 420
+  speed_limit_kmph: 60.0
+
+models:
+  vehicle_detector: "yolov8n.pt"
+  helmet_detector: "yolov8n.pt"
+  plate_detector: "yolov8n.pt"
+
+ocr:
+  languages:
+    - en
+  min_text_confidence: 0.25
+
+reporting:
+  save_dir: "data/violations"
+  submit_to_api: false
+  api_url: "http://localhost:8000/api/violations"
+
+display:
+  show: true
+  resize_width: 1280
